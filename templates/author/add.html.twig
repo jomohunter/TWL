@@ -1,0 +1,23 @@
+{{ form(formulaire) }}
+
+
+{{ form_start(formulaire) }} {#<form>#}
+
+{#
+
+{{ form_label(formulaire.username,'le nom dauteur') }} <label>
+
+{{ form_widget(formulaire.username) }} <input>
+
+{{form_errors(formulaire.username) }} <controle saisi>
+
+{{ form_row(formulaire.username) }}
+
+
+{{ form_label(formulaire.email,'le nom dauteur') }} <label>
+
+{{ form_widget(formulaire.email) }} <input>
+
+{{form_errors(formulaire.email) }} <controle saisi>
+
+{{ form_end(formulaire) }}   <form>#}

@@ -1,0 +1,22 @@
+{% if authors is not empty %}
+
+{% set nb = 0%}
+{% for author in authors %}
+
+
+<h3>name : {{ author.username|upper }}</h3>
+
+{% set nb = nb + author.nb_books%}
+
+<a href="/auhtorDetails/{{author.id}}">details</a>
+
+{% else %} pas d'article trouvé
+{% endfor %}
+
+
+
+<h3>Le nombre des auteurs est : {{ authors|length }}</h3>
+<h3>total books written: {{ nb }}</h3>
+
+
+{% endif %}

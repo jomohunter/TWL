@@ -1,0 +1,34 @@
+<div style='text-align: center;
+  border: 3px solid black;'>
+<h2> List authors </h2>
+
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+
+<table style="width:100%">
+{%for author in authors %}
+
+<tr>
+<th> username </th>
+<th> email </th>
+<th> actions </th>
+</tr>
+ <tr>
+
+   <th> {{author.username}}</th>
+   <th> {{author.email}}</th>
+ <th> <a href='show/{{author.id}}'> show </a>
+ <a href='delete/{{author.id}}'> delete </a>
+    <a href="{{ path('update',{'id':author.id}) }}"> update </a></th>
+</tr>
+
+    </br></br>
+
+    
+
+{%endfor%}
+</table>
+</div>

@@ -1,0 +1,18 @@
+
+{% for author in authors%}
+
+{% if author.id == id %}
+
+<h3>name : {{ author.username|upper }}</h3>
+
+<img src="{{author.picture}}"> 
+
+{{author.email}}
+
+{{author.nb_books}}
+
+{% endif %}
+
+
+{% else %} pas d'article trouvé
+{% endfor %}
